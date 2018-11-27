@@ -21,6 +21,7 @@ public class VistaPrincipale extends javax.swing.JPanel {
         bottoneGeneraSchema = new javax.swing.JButton();
         javax.swing.JLabel labelNome = new javax.swing.JLabel();
         textNome = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
         bottoneVisualizzaRelazione = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         listaRelazioni = new javax.swing.JList<>();
@@ -50,8 +51,6 @@ public class VistaPrincipale extends javax.swing.JPanel {
         labelNome.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
         labelNome.setText("Nome schema relazionale:");
 
-        bottoneVisualizzaRelazione.setText("jButton1");
-
         javax.swing.GroupLayout pannelloGeneraLayout = new javax.swing.GroupLayout(pannelloGenera);
         pannelloGenera.setLayout(pannelloGeneraLayout);
         pannelloGeneraLayout.setHorizontalGroup(
@@ -59,9 +58,7 @@ public class VistaPrincipale extends javax.swing.JPanel {
             .addGroup(pannelloGeneraLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(bottoneGeneraSchema)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 350, Short.MAX_VALUE)
-                .addComponent(bottoneVisualizzaRelazione)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pannelloGeneraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pannelloGeneraLayout.createSequentialGroup()
                     .addContainerGap()
@@ -81,9 +78,7 @@ public class VistaPrincipale extends javax.swing.JPanel {
             pannelloGeneraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pannelloGeneraLayout.createSequentialGroup()
                 .addContainerGap(156, Short.MAX_VALUE)
-                .addGroup(pannelloGeneraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bottoneGeneraSchema)
-                    .addComponent(bottoneVisualizzaRelazione))
+                .addComponent(bottoneGeneraSchema)
                 .addContainerGap())
             .addGroup(pannelloGeneraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(pannelloGeneraLayout.createSequentialGroup()
@@ -102,6 +97,10 @@ public class VistaPrincipale extends javax.swing.JPanel {
                     .addContainerGap(59, Short.MAX_VALUE)))
         );
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Schemi Generati", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        bottoneVisualizzaRelazione.setText("jButton1");
+
         listaRelazioni.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -111,6 +110,32 @@ public class VistaPrincipale extends javax.swing.JPanel {
 
         bottoneSalva.setText("jButton1");
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(bottoneSalva)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 371, Short.MAX_VALUE)
+                        .addComponent(bottoneVisualizzaRelazione))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                .addGap(8, 8, 8)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bottoneSalva)
+                    .addComponent(bottoneVisualizzaRelazione))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -119,23 +144,17 @@ public class VistaPrincipale extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pannelloGenera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1)))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(bottoneSalva)
-                .addContainerGap(438, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(pannelloGenera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bottoneSalva)
-                .addGap(8, 8, 8))
+                .addGap(5, 5, 5)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -182,6 +201,7 @@ public class VistaPrincipale extends javax.swing.JPanel {
     private javax.swing.JButton bottoneGeneraSchema;
     private javax.swing.JButton bottoneSalva;
     private javax.swing.JButton bottoneVisualizzaRelazione;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList<String> listaRelazioni;
     private javax.swing.JPanel pannelloGenera;

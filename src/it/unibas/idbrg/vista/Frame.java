@@ -50,6 +50,7 @@ public class Frame extends javax.swing.JFrame {
         itemGeneraRelazione = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         itemSalvaRelazione = new javax.swing.JMenuItem();
+        itemVisualizzaRelazione = new javax.swing.JMenuItem();
         jSeparator3 = new javax.swing.JPopupMenu.Separator();
         itemEsci = new javax.swing.JMenuItem();
 
@@ -63,6 +64,9 @@ public class Frame extends javax.swing.JFrame {
 
         itemSalvaRelazione.setText("jMenuItem1");
         menuFile.add(itemSalvaRelazione);
+
+        itemVisualizzaRelazione.setText("jMenuItem1");
+        menuFile.add(itemVisualizzaRelazione);
         menuFile.add(jSeparator3);
 
         itemEsci.setText("jMenuItem1");
@@ -101,6 +105,7 @@ public class Frame extends javax.swing.JFrame {
        this.itemEsci.setAction(Applicazione.getInstance().getControlloFrame().getAzioneEsci());
        this.itemSalvaRelazione.setAction(Applicazione.getInstance().getControlloFrame().getAzioneSalva());
        this.itemGeneraRelazione.setAction(Applicazione.getInstance().getControlloVistaPrincipale().getAzioneGeneraSchema());
+       this.itemVisualizzaRelazione.setAction(Applicazione.getInstance().getControlloVistaPrincipale().getAzioneVisualizzaSchema());
    }
    
    public void schermoErrori (String errori) {
@@ -115,6 +120,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemEsci;
     private javax.swing.JMenuItem itemGeneraRelazione;
     private javax.swing.JMenuItem itemSalvaRelazione;
+    private javax.swing.JMenuItem itemVisualizzaRelazione;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     // End of variables declaration//GEN-END:variables

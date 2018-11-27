@@ -13,6 +13,8 @@ import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JFileChooser;
 import javax.swing.KeyStroke;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class ControlloVistaPrincipale {
 
@@ -120,6 +122,9 @@ public class ControlloVistaPrincipale {
         private String acquisisciFile() {
             String nomeFile = null;
             JFileChooser fileChooser = Applicazione.getInstance().getFrame().getFileChooser();
+            FileFilter filtro = new FileNameExtensionFilter(".txt", "txt");
+            fileChooser.addChoosableFileFilter(filtro);
+            fileChooser.setAcceptAllFileFilterUsed(false);
             int scelta = fileChooser.showSaveDialog(Applicazione.getInstance().getFrame());
             if (scelta == JFileChooser.APPROVE_OPTION) {
                 File file = fileChooser.getSelectedFile();
@@ -135,9 +140,9 @@ public class ControlloVistaPrincipale {
 
         public AzioneVisualizzaSchema() {
             this.putValue(Action.NAME, "Visualizza lo schema selezionato");
-            this.putValue(Action.SHORT_DESCRIPTION, "Visualizza lo schema selezionato nella tabella sottostante");
-            this.putValue(Action.MNEMONIC_KEY, KeyEvent.VK_V);
-            this.putValue(Action.ACCELERATOR_KEY, KeyStroke.getKeyStroke("ctrl V"));
+            this.putValue(Action.SHORT_DESCRIPTION, "Visualizza lo schema selezionato nella lista");
+            this.putValue(Action.MNEMONIC_KEY, KeyEvent.VK_M);
+            this.putValue(Action.ACCELERATOR_KEY, KeyStroke.getKeyStroke("ctrl M"));
             this.setEnabled(false);
         }
 

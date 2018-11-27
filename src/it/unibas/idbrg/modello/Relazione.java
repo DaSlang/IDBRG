@@ -43,9 +43,8 @@ public class Relazione {
     
     public String presentationString () {
         StringBuilder stringa = new StringBuilder();
-        stringa.append("Nome relazione: ").append(this.nome).append('\n');
-        stringa.append("Attributi: ").append(this.insiemeAttributi).append('\n');
-        stringa.append('\n');
+        stringa.append("Nome relazione: ").append(this.nome).append("\n\n");
+        stringa.append("Attributi: ").append(this.insiemeAttributi).append("\n\n");
         for (Dipendenza dipendenza : this.insiemeDipendenze) {
             stringa.append(dipendenza.toString());
             stringa.append('\n');
